@@ -1,5 +1,7 @@
 package guis;
 
+import constants.CommonConstants;
+
 import javax.swing.*;
 
 //Class responsable for all the Project GUI config
@@ -11,5 +13,7 @@ public class Form extends JFrame {
         setLocationRelativeTo(null);
         setLayout(null);
         setResizable(false);
+
+        getContentPane().setBackground(CommonConstants.BACKGROUND_COLOR);
     }
 }
