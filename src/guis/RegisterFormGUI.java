@@ -4,6 +4,9 @@ import constants.CommonConstants;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class RegisterFormGUI extends Form {
 
@@ -125,5 +128,15 @@ public class RegisterFormGUI extends Form {
         backToLogin.setBounds(125,600,250,30);
 
         add(backToLogin);
+
+        //functionality that when clicked will come back to the Login area
+        backToLogin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                RegisterFormGUI.this.dispose();
+
+                new LoginFormGUI().setVisible(true);
+            }
+        });
     }
 }

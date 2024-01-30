@@ -4,6 +4,9 @@ import constants.CommonConstants;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class LoginFormGUI extends Form{
     public LoginFormGUI() {
@@ -99,5 +102,15 @@ public class LoginFormGUI extends Form{
         registerLabel.setBounds(125,600,250,30);
 
         add(registerLabel);
+
+        // functionality that when clicked it will launch the register area
+        registerLabel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                LoginFormGUI.this.dispose();
+
+                new RegisterFormGUI().setVisible(true);
+            }
+        });
     }
 }
