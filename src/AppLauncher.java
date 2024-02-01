@@ -10,8 +10,9 @@ public class AppLauncher {
             public void run() {
                 new LoginFormGUI().setVisible(true);
 
-                System.out.println(JDBC.checkUser("username"));
+                System.out.println(JDBC.checkUser("usernamee"));
             }
+
         });
 
     };
